@@ -1,4 +1,4 @@
-#!/usr/bin/bash --
+#!/bin/bash --
 
 # Constants
 DOT_CONF=~/.config/
