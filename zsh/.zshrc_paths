@@ -3,18 +3,20 @@ export PATH=$PATH:$HOME/.local/bin/
 export PATH=$PATH:$HOME/.cabal/bin/
 
 # NeoVIM
-export PATH=$PATH:$HOME/git/neovim/install/bin/
-export VIMRUNTIME=$HOME/git/neovim/install/share/nvim/runtime/
+export PATH=$PATH:$HOME/github/neovim/install/bin/
+export VIMRUNTIME=$HOME/github/neovim/install/share/nvim/runtime/
 
 # LLVM
-export PATH=$PATH:$HOME/llvm-install/bin
+export PATH=$PATH:$HOME/svn/llvm-install/bin
 
 # MPI
-export PATH=$PATH:$HOME/Softwares/ompi/install/bin
+export PATH=$PATH:$HOME/github/ompi/install/bin
 
 # BEAR
-export PATH=$PATH:$HOME/Softwares/Bear/install/bin
-export PATH=$PATH:$HOME/Softwares/anki-2.0.43/bin/
+export PATH=$PATH:$HOME/github/Bear/install/bin
+
+# Anki
+export PATH=$PATH:$HOME/softwares/anki-2.0.43/bin/
 
 # Android
 export PATH=$PATH:$HOME/Android/Sdk/platform-tools/
@@ -24,26 +26,18 @@ export PATH=$PATH:$HOME/Android/Sdk/platform-tools/
 export PATH=$PATH:$HOME/node_modules/.bin/
 
 # Ocarina
-export PATH=$PATH:$HOME/Softwares/ocarina-2.0w-suite-linux-x86_64-20161202/bin/
+export PATH=$PATH:$HOME/softwares/ocarina-2.0w-suite-linux-x86_64-20161202/bin/
 
 # OmNET
-export PATH=$PATH:$HOME/Softwares/omnetpp-5.1.1
-export PATH=$PATH:$HOME/Softwares/omnetpp-5.1.1/bin
-export PATH=$PATH:$HOME/Softwares/omnetpp-5.1.1/ide
+export PATH=$PATH:$HOME/softwares/omnetpp-5.1.1
+export PATH=$PATH:$HOME/softwares/omnetpp-5.1.1/bin
+export PATH=$PATH:$HOME/softwares/omnetpp-5.1.1/ide
 
 # Cargo
 export PATH=$PATH:$HOME/.cargo/bin
 
 # Swift
-export PATH=$PATH:$HOME/git/build/Ninja-RelWithDebInfoAssert/swift-linux-x86_64/bin/
-
-# HLA
-export PATH=$PATH:$HOME/Codes/rosace_socpss_loop/install/bin/
-export PATH=$PATH:$HOME/Codes/rosace_socpss_loop/tools/plot/
-export PATH=$PATH:$HOME/Codes/rosace_socpss_hla/install/bin/
-export PATH=$PATH:$HOME/Softwares/Certi/certi/install/bin/
-export PATH=$PATH:$HOME/Codes/rosace_socpss_hla/install/share/rosace_socpss_hla/tools/
-export CERTI_FOM_PATH=$CERTI_FOM_PATH:$HOME/Codes/rosace_socpss_hla/install/share/rosace_socpss_hla/federations/
+export PATH=$PATH:$HOME/github/build/Ninja-RelWithDebInfoAssert/swift-linux-x86_64/bin/
 
 # Zotero
-export PATH=$PATH:$HOME/Softwares/Zotero_linux-x86_64
+export PATH=$PATH:$HOME/softwares/Zotero_linux-x86_64
