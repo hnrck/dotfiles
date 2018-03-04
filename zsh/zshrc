@@ -38,18 +38,6 @@ then
     alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 fi
 
-# Basic PATH settings.
-# export PATH= # Uncomment if you want a clean PATH.
-export PATH=$PATH:/sbin
-export PATH=$PATH:/bin
-export PATH=$PATH:/usr/sbin
-export PATH=$PATH:/usr/bin/
-export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:/usr/local/bin
-
-
-export VIM_BACKGROUND=dark
-
 # PATHs to add.
 if [ -f $HOME/.zshrc_paths ]
 then

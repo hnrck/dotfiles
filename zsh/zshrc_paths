@@ -1,43 +1,17 @@
+# export PATH= # Uncomment if you want a clean PATH.
+
+export PATH=$PATH:/sbin
+export PATH=$PATH:/bin
+
+export PATH=$PATH:/usr/sbin
+export PATH=$PATH:/usr/bin/
+
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/usr/local/bin
+
 export PATH=$PATH:/usr/lib64/ccache
+
+export PATH=$PATH:$HOME/.local/sbin/
 export PATH=$PATH:$HOME/.local/bin/
+
 export PATH=$PATH:$HOME/.cabal/bin/
-
-# NeoVIM
-export PATH=$PATH:$HOME/github/neovim/install/bin/
-export VIMRUNTIME=$HOME/github/neovim/install/share/nvim/runtime/
-
-# LLVM
-export PATH=$PATH:$HOME/svn/llvm-install/bin
-
-# MPI
-export PATH=$PATH:$HOME/github/ompi/install/bin
-
-# BEAR
-export PATH=$PATH:$HOME/github/Bear/install/bin
-
-# Anki
-export PATH=$PATH:$HOME/softwares/anki-2.0.43/bin/
-
-# Android
-export PATH=$PATH:$HOME/Android/Sdk/platform-tools/
-export PATH=$PATH:$HOME/Android/Sdk/platform-tools/
-
-# Node
-export PATH=$PATH:$HOME/node_modules/.bin/
-
-# Ocarina
-export PATH=$PATH:$HOME/softwares/ocarina-2.0w-suite-linux-x86_64-20161202/bin/
-
-# OmNET
-export PATH=$PATH:$HOME/softwares/omnetpp-5.1.1
-export PATH=$PATH:$HOME/softwares/omnetpp-5.1.1/bin
-export PATH=$PATH:$HOME/softwares/omnetpp-5.1.1/ide
-
-# Cargo
-export PATH=$PATH:$HOME/.cargo/bin
-
-# Swift
-export PATH=$PATH:$HOME/github/build/Ninja-RelWithDebInfoAssert/swift-linux-x86_64/bin/
-
-# Zotero
-export PATH=$PATH:$HOME/softwares/Zotero_linux-x86_64
