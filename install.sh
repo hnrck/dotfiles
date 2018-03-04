@@ -3,6 +3,9 @@
 # ZSH confs
 bash zsh/zsh-install.sh
 
+# NeoVim
+bash neovim/neovim-install.sh
+
 # Sakura conf
 bash sakura/sakura-install.sh
 
