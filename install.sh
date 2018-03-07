@@ -12,6 +12,9 @@ bash neovim/neovim-install.sh
 # Sakura conf
 bash sakura/sakura-install.sh
 
+# Clang
+bash clang/clang-install.sh
+
 # Stack
 bash stack/stack-install.sh
 
