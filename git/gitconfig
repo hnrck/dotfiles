@@ -1,0 +1,26 @@
+[user]
+	email = henrick.deschamps@gmail.com
+	name = Henrick Deschamps
+[core]
+	excludesfile = ~/.gitignore
+	editor = nvim
+    filemode = false
+[color]
+	ui = auto
+[push]
+	default = simple
+[alias]
+    git = !exec git
+	st = status
+	ci = commit -S
+	co = checkout
+	cim = commit -S -m
+	dci = svn dcommit
+	a = add
+	up = pull
+	p = push
+	cl = clone
+	ri = rebase -i
+	t = tag -s
+[include]
+	default = ~/.gitconfig.local

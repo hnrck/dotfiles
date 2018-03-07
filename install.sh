@@ -3,6 +3,9 @@
 # ZSH confs
 bash zsh/zsh-install.sh
 
+# Git
+bash git/git-install.sh
+
 # NeoVim
 bash neovim/neovim-install.sh
 
