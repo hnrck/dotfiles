@@ -67,3 +67,8 @@ if [ -f $HOME/.zshrc_local ]
 then
   source $HOME/.zshrc_local
 fi
+
+# Autocompletion for stack
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+eval "$(stack --bash-completion-script stack)"
