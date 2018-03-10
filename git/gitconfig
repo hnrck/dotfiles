@@ -15,6 +15,7 @@
 	ci = commit -S
 	co = checkout
 	cim = commit -S -m
+	ca = commit -S --amend
 	dci = svn dcommit
 	a = add
 	up = pull
@@ -22,5 +23,8 @@
 	cl = clone
 	ri = rebase -i
 	t = tag -s
+	lg = log
+	sh = stash
+	sp = stash
 [include]
 	default = ~/.gitconfig.local
