@@ -11,7 +11,7 @@ export PATH=$PATH:/usr/local/bin
 
 export PATH=$PATH:/usr/lib64/ccache
 
-export PATH=$PATH:$HOME/.local/sbin/
-export PATH=$PATH:$HOME/.local/bin/
-
 export PATH=$PATH:$HOME/.cabal/bin/
+
+export PATH=$HOME/.local/bin/:$PATH
+export PATH=$HOME/.local/sbin/:$PATH
