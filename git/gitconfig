@@ -4,7 +4,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = nvim
-    filemode = false
+	filemode = false
 [color]
 	ui = auto
 [push]
