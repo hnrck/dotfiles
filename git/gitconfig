@@ -10,21 +10,21 @@
 [push]
 	default = simple
 [alias]
-    git = !exec git
-	st = status
-	ci = commit -S
-	co = checkout
+	a   = add
+	ca  = commit -S --amend
+	ci  = commit -S
 	cim = commit -S -m
-	ca = commit -S --amend
+	cl  = clone
+	co  = checkout
 	dci = svn dcommit
-	a = add
-	up = pull
-	p = push
-	cl = clone
-	ri = rebase -i
-	t = tag -s
-	lg = log
-	sh = stash
-	sp = stash
+    git = !exec git
+	lg  = log
+	p   = push
+	ri  = rebase -i
+	sh  = stash
+	sp  = stash
+	st  = status
+	t   = tag -s
+	up  = pull
 [include]
 	default = ~/.gitconfig.local
