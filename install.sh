@@ -21,5 +21,8 @@ bash stack/stack-install.sh
 # XMonad
 bash xmonad/xmonad-install.sh
 
+# Font Awesome
+bash fontawesome/fa-install.sh
+
 # Github
 bash github/github-clone.sh
