@@ -18,5 +18,8 @@ bash clang/clang-install.sh
 # Stack
 bash stack/stack-install.sh
 
+# XMonad
+bash xmonad/xmonad-install.sh
+
 # Github
 bash github/github-clone.sh
