@@ -18,4 +18,4 @@ if [ -L $SAKURA_CONF ]
 then
     unlink  $SAKURA_CONF
 fi
-ln ./sakura/sakura.conf $SAKURA_DIR
+ln -s `pwd`/sakura/sakura.conf $SAKURA_DIR
