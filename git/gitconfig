@@ -39,4 +39,4 @@
 	t   = tag -s
 	up  = pull
 [include]
-	default = ~/.gitconfig.local
+	path = ~/.gitconfig.local
