@@ -8,7 +8,7 @@ call SpaceVim#layers#load('lang#c')
 call SpaceVim#layers#load('incsearch')
 " call SpaceVim#layers#load('lang#lua')
 " call SpaceVim#layers#load('lang#perl')
-call SpaceVim#layers#load('lang#rust')
+" call SpaceVim#layers#load('lang#rust')
 "call SpaceVim#layers#load('lang#java')
 "call SpaceVim#layers#load('lang#javascript')
 call SpaceVim#layers#load('lang#vim')
@@ -16,7 +16,7 @@ call SpaceVim#layers#load('lang#python')
 call SpaceVim#layers#load('lang#xml')
 call SpaceVim#layers#load('lang#haskell')
 "call SpaceVim#layers#load('lang#elixir')
-call SpaceVim#layers#load('tools#screensaver')
+" call SpaceVim#layers#load('tools#screensaver')
 call SpaceVim#layers#load('shell')   
 
 let g:spacevim_enable_vimfiler_welcome = 1
@@ -66,6 +66,7 @@ set history=700
 "map <silent><F3> :NEXTCOLOR<cr>
 "map <silent><F2> :PREVCOLOR<cr>
 
+" Comments in italic with compatible terminal emulator
 set t_ZH=[3m
 set t_ZR=[23m
 highlight Comment cterm=italic
@@ -79,12 +80,20 @@ let g:syntastic_c_include_dirs = ['./include', '/usr/include']
 let g:syntastic_cpp_include_dirs = ['./include', '/usr/include']
 
 let g:syntastic_cpp_checkers=['clang_check', 'clang_tidy', 'cppcheck', 'cpplint', 'gcc', 'oclint', 'pc_lint', 'vera++']
+
+let g:syntastic_c_compiler = 'clang_check'
+let g:syntastic_c_compiler_options = ' -std=c11 -stdlib=libc'
+
+let g:syntastic_c_cppcheck_args = '-q --enable=style'
+let g:syntastic_c_clang_check_args = ' -std=c11 -stdlib=libc'
+
 let g:syntastic_cpp_compiler = 'clang_check'
-let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
+let g:syntastic_cpp_compiler_options = ' -std=c++1z -stdlib=libc++'
 
 let g:syntastic_cpp_cppcheck_args = '-q --enable=style'
-let g:syntastic_cpp_clang_check_args = ' -std=c++14 -stdlib=libc++'
+let g:syntastic_cpp_clang_check_args = ' -std=c++1z -stdlib=libc++'
 
+" C/C++ tools
 let g:C_UseTool_cmake   = 'yes'
 let g:C_UseTool_doxygen = 'yes'
 
@@ -92,7 +101,7 @@ let g:C_UseTool_doxygen = 'yes'
 " file for all possible options:
 let g:spacevim_default_indent = 2 " 2, 4, 8
 
-let g:spacevim_max_column     = 100 " 80, 100
+let g:spacevim_max_column     = 100 " 80, 100, 120
 
 let g:spacevim_plugin_manager = 'dein'  " neobundle or dein or vim-plug
 
@@ -113,8 +122,10 @@ let g:spacevim_plugin_manager = 'dein'  " neobundle or dein or vim-plug
 " If there is a particular plugin you don't like, you can define this
 " variable to disable them entirely:
 " let g:spacevim_disabled_plugins=['vim-foo', 'vim-bar']
+let g:spacevim_disabled_plugins=['deoplete-clang2']
 
 let g:spacevim_custom_plugins = [
+            \ ['Shougo/deoplete-clangx'],
             \ ['eagletmt/ghcmod-vim'],
             \ ['bitc/vim-hdevtools'],
             \ ['Twinside/vim-hoogle'],
@@ -129,12 +140,16 @@ let g:spacevim_custom_plugins = [
 set background=dark
 set termguicolors
 
-let g:spacevim_colorscheme    = 'NeoSolarized'
+" let g:spacevim_colorscheme    = 'NeoSolarized'
+let g:spacevim_colorscheme    = 'deep-space'
 let g:spacevim_colorscheme_bg = 'dark'
 
 " Chromatica
 if !exists("$LIBCLANG_PATH")
     let $LIBCLANG_PATH = '/usr/lib/'
 endif
+
+" For vertical diff by default
+set diffopt+=vertical
 
 let g:chromatica#libclang_path = expand("$LIBCLANG_PATH")
