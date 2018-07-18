@@ -1,15 +1,16 @@
 Config {
       font = "xft:Inconsolata Nerd Font Mono Medium:size=9:antialias=true"
     , additionalFonts = ["xft:FontAwesome:size=9:antialias=true" ]
-    , bgColor = "#000000"
-    , fgColor = "#ffffff"
-    , borderColor = "#000000"
+
+    -- , bgColor = "#000000"
+    -- , fgColor = "#ffffff"
+    -- , borderColor = "#000000"
 
     -- Colors alt -- solarized dark: 
-    -- , bgColor = "#002b36"
-    -- , fgColor = "#93a1a1"
-    -- , borderColor = "#002b36"
-    --
+    , bgColor = "#002b36"
+    , fgColor = "#93a1a1"
+    , borderColor = "#002b36"
+
     -- Colors alt -- solarized light:
     -- , bgColor = "#fdf6e3"
     -- , fgColor = "#586e75"
