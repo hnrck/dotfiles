@@ -1,0 +1,66 @@
+[options]
+  bootstrap_before = "init#before"
+  buffer_index_type = 4
+  colorscheme = "NeoSolarized"
+  background = "dark"
+  default_indent = 2
+  enable_debug = 0
+  enable_guicolors = true
+  enable_statusline_display_mode = false
+  enable_tabline_filetype_icon = true
+  max_column = 100
+  github_username = 'hnrck'
+  realtime_leader_guide = 1
+  statusline_inactive_separator = "arrow"
+  statusline_separator = "arrow"
+
+[[layers]]
+  name = 'autocomplete'
+  auto-completion-delay = 10
+  auto-completion-return-key-behavior = "complete"
+  auto-completion-tab-key-behavior = "smart"
+
+[[layers]]
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
+
+[[layers]]
+  name = 'git'
+[[layers]]
+  name = 'versionControl'
+
+[[layers]]
+  name = 'incsearch'
+
+[[layers]]
+  name = 'lang#ada'
+[[layers]]
+  name = 'lang#c'
+[[layers]]
+  name = 'lang#cpp'
+[[layers]]
+  name = 'lang#elixir'
+[[layers]]
+  name = 'lang#haskell'
+[[layers]]
+  name = 'lang#markdown'
+[[layers]]
+  name = 'lang#toml'
+[[layers]]
+  name = 'lang#python'
+[[layers]]
+  name = 'lang#xml'
+[[layers]]
+  name = 'lang#vim'
+
+[[custom_plugins]]
+  name = 'eagletmt/ghcmod-vim'
+  name = 'bitc/vim-hdevtools'
+  name = 'Twinside/vim-hoogle'
+  name = 'rhysd/vim-clang-format'
+  name = 'vhdirk/vim-cmake'
+  name = 'arecarn/vim-selection'
+  name = 'rhysd/vim-grammarous'
+  name = 'tyrannicaltoucan/vim-deep-space'
+  name = 'icymind/NeoSolarized'
