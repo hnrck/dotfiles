@@ -9,8 +9,14 @@ set shell=/bin/sh
 " Set the term
 " set term=screen-256color
 " set term=xterm-256color
-set t_Co=256
-"set t_ut=
+" set t_Co=256
+" if !has("gui_running")
+"   set term=screen-256color
+"   if &term =~ '256color'
+"     set t_ut=
+"   endif
+" endif
+"
 
 " Sets how many lines of history VIM has to remember
 set history=700
@@ -31,12 +37,12 @@ set t_ZR=[23m
 highlight Comment cterm=italic
 
 " Colors
-hi SignColumn term=underline ctermfg=10 ctermbg=0 guifg=#586e75 guibg=#073642
+" hi SignColumn term=underline ctermfg=10 ctermbg=0 guifg=#586e75 guibg=#073642
 let g:syntastic_loc_list_height=0
 
 " Syntastic
-let g:syntastic_c_include_dirs = ['./include', '/usr/include']
-let g:syntastic_cpp_include_dirs = ['./include', '/usr/include']
+" let g:syntastic_c_include_dirs = ['./include', '/usr/include']
+" let g:syntastic_cpp_include_dirs = ['./include', '/usr/include']
 
 let g:syntastic_cpp_checkers=['clang_check', 'clang_tidy', 'cppcheck', 'cpplint', 'gcc', 'oclint', 'pc_lint', 'vera++']
 
@@ -74,4 +80,15 @@ set diffopt+=vertical
 " Useful remap
 imap jj <Esc>
 imap hh <Esc>
-imap <space><space> <Esc>
+" imap <space><space> <Esc>
+
+set wrap
+
+" Nord
+let g:nord_italic = 1
+let g:nord_underline = 1
+let g:nord_italic_comments = 1
+let g:nord_uniform_status_lines = 1
+let g:nord_comment_brightness = 20
+let g:nord_uniform_diff_background = 1
+let g:nord_cursor_line_number_background = 1

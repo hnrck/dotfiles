@@ -1,7 +1,7 @@
 [options]
   bootstrap_before = "init#before"
   buffer_index_type = 4
-  colorscheme = "NeoSolarized"
+  colorscheme = "nord"
   background = "dark"
   default_indent = 2
   enable_debug = 0
@@ -26,23 +26,38 @@
   default_height = 30
 
 [[layers]]
+  name = 'VersionControl'
+[[layers]]
   name = 'git'
 [[layers]]
-  name = 'versionControl'
+  name = 'github'
 
 [[layers]]
   name = 'incsearch'
+[[layers]]
+  name = 'ctrlp'
 
 [[layers]]
-  name = 'lang#ada'
+  name = 'colorscheme'
+
+[[layers]]
+  name = 'lsp'
+
 [[layers]]
   name = 'lang#c'
-[[layers]]
-  name = 'lang#cpp'
+  clang_executable = '/usr/home/h.deschamps/.local/clang+llvm-7.0.0-x86_64-linux-gnu-ubuntu-16.04/bin/clang'
+  libclang_path = '/usr/home/h.deschamps/.local/clang+llvm-7.0.0-x86_64-linux-gnu-ubuntu-16.04/lib/'
+  [layer.clang_std]
+    c = 'c11'
+    cpp = 'c++17'
+    objc = 'c11'
+    objcpp = 'c++17'
 [[layers]]
   name = 'lang#elixir'
 [[layers]]
   name = 'lang#haskell'
+[[layers]]
+  name = 'lang#latex'
 [[layers]]
   name = 'lang#markdown'
 [[layers]]
@@ -64,3 +79,5 @@
   name = 'rhysd/vim-grammarous'
   name = 'tyrannicaltoucan/vim-deep-space'
   name = 'icymind/NeoSolarized'
+#name = 'arcticicestudio/nord-vim'
+#name = 'severin-lemaignan/vim-minimap'
