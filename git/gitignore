@@ -2,6 +2,7 @@
 *.*~
 *.swp
 .refresh
+.DS_Store
 
 build
 install

@@ -27,7 +27,7 @@
 	f   = fetch
 	fa  = fetch --all
 	git = !exec git
-	lg  = log
+	lg  = log --color --all --date-order --decorate --dirstat=lines,cumulative --stat
 	lf  = log --all --graph --decorate=full
 	m   = merge
 	p   = push
