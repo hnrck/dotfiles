@@ -29,7 +29,6 @@ then
       aws
       venv
       conda
-      pyenv
       dotnet
       ember
       kubecontext
