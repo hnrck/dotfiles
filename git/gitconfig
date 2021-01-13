@@ -44,7 +44,11 @@
 	st  = status
 	sup = svn rebase
 	t   = tag -s
+	uca  = commit --amend
+	uci  = commit 
+	ucim = commit -m
 	up  = pull --rebase
 	upm = pull
+	ut   = tag
 [include]
 	path = ~/.gitconfig.local
