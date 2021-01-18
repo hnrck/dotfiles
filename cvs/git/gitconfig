@@ -1,0 +1,56 @@
+[user]
+	email = henrick.deschamps@gmail.com
+	name = Henrick Deschamps
+[core]
+	excludesfile = ~/.gitignore
+	editor = nvim
+	filemode = false
+[color]
+	ui = auto
+[pull]
+    rebase = true
+[push]
+	default = simple
+[alias]
+	a   = add
+	ai  = add -i
+	b   = branch
+	bd  = branch -d
+	ca  = commit -S --amend
+	ci  = commit -S
+	cim = commit -S -m
+	cl  = clean -f
+	cla = clean -dxf
+	cli = clean -i
+	clo = clone
+	co  = checkout
+	d   = diff
+	dci = svn dcommit
+	f   = fetch
+	fa  = fetch --all
+	git = !exec git
+	lg  = log --color --all --date-order --decorate --dirstat=lines,cumulative --stat
+	lf  = log --all --graph --decorate=full
+	m   = merge
+	p   = push
+	pa  = push --all origin
+	pt  = push --tags
+	r   = reset
+	re  = rebase
+	ri  = rebase -i
+	s   = show
+	sd  = stash drop
+	sh  = stash
+	sl  = stash list
+	sp  = stash pop
+	st  = status
+	sup = svn rebase
+	t   = tag -s
+	uca  = commit --amend
+	uci  = commit 
+	ucim = commit -m
+	up  = pull --rebase
+	upm = pull
+	ut   = tag
+[include]
+	path = ~/.gitconfig.local
