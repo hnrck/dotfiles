@@ -54,7 +54,7 @@ shell: ${SHELL_DOTFILE}
 term: ${TERM_DOTFILE}
 
 # Tools
-tools: tmux
+tools: tmux curl wget
 
 # Window manager
 wm: haskell-dev xmonad
@@ -133,7 +133,11 @@ tmux: tmux-cache
 	@ ${LINKER} --dotfile tmux.conf.local --source-location tmux
 
 tmux-cache:
-	git -C ${CACHE_DIR}/tmux pull || git clone https://github.com/gpakosz/.tmux.git ${CACHE_DIR}/tmux
+	git -C ${CACHE_DIR}/tmux pull 1> /dev/null 2> /dev/null || git clone https://github.com/gpakosz/.tmux.git ${CACHE_DIR}/tmux 1> /dev/null 2> /dev/null
+
+# Wget
+wget:
+	@ ${LINKER} --dotfile wgetrc --source-location tools/wget
 
 # ZSH
 zsh: shell/zsh
