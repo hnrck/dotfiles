@@ -97,14 +97,14 @@ neovim: spacevim
 	@ ${LINKER} --dotfile after.vim --source-location editor/neovim --target-file after.vim --target-location ${HOME}/.SpaceVim.d/autoload
 
 spacevim:
-	@ curl -sLf https://spacevim.org/install.sh | bash
+	curl -sLf https://spacevim.org/install.sh | bash 2> /dev/null
 
 # Python configuration
 py-dev: py-venv
 
 # Python virtualenv
 py-venv:
-	@ python3 -m virtualenv ${CACHE_DIR}/venv
+	python3 -m virtualenv ${CACHE_DIR}/venv 1> /dev/null
 	@ ${LINKER} --dotfile venv --source-location ${CACHE_DIR}
 
 # Git
