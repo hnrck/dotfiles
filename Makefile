@@ -64,8 +64,8 @@ wm: haskell-dev xmonad
 ###############################################################################
 
 # Clang
-clang: dev/clang
-	@ ${LINKER} --dotfile ${<} --source-file clang_format
+clang:
+	@ ${LINKER} --dotfile clang_format --source-location dev/clang
 
 # Conda
 conda: zshrcd
