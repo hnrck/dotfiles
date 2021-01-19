@@ -68,8 +68,13 @@ clang: dev/clang
 	@ ${LINKER} --dotfile ${<} --source-file clang_format
 
 # Conda
-conda: dev/conda
-	@ ${LINKER} --dotfile ${<} --source-file condarc
+conda: zshrcd
+	@ ${LINKER} --dotfile condarc --source-location dev/conda
+	@ ${LINKER} --dotfile zshrc_conda --source-location dev/conda --target-file zshrc_conda --target-location ${HOME}/.zshrc.d
+
+# Curl
+curl:
+	@ ${LINKER} --dotfile curlrc --source-location tools/curl
 
 # CPP configuration
 cpp-dev: clang
