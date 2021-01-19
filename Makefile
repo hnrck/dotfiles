@@ -142,9 +142,12 @@ wget:
 # ZSH
 zsh: shell/zsh
 	@ ${LINKER} --dotfile zshrc --source-location shell/zsh
-	@ ${LINKER} --dotfile zshrc_alias --source-location shell/zsh
+	@ ${LINKER} --dotfile zshrc_aliases --source-location shell/zsh
 	@ ${LINKER} --dotfile zshrc_paths --source-location shell/zsh
 	@ ${LINKER} --dotfile zshrc_style --source-location shell/zsh
+
+zshrcd:
+	@ mkdir -p ${HOME}/.zshrc.d
 
 ###############################################################################
 # Utils                                                                       #
