@@ -75,7 +75,7 @@ conda: dev/conda
 cpp-dev: clang
 
 # Haskell configuration
-haskell-dev:
+haskell-dev: stack
 
 # Hyper
 hyper:
@@ -114,6 +114,10 @@ sakura:
 # ssh
 ssh:
 	echo "Please find info about ssh configuration in tools/ssh"
+
+# Stack
+stack:
+	@ ${LINKER} --dotfile zshrc_stack --source-location dev/stack --target-file zshrc_stack --target-location ${HOME}/.zshrc.d
 
 # Thunderbird
 thunderbird:

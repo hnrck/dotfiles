@@ -1,0 +1,1 @@
+command -v stack >/dev/null 2>&1 && {  eval "$(stack --bash-completion-script stack)" }
