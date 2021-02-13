@@ -92,6 +92,7 @@ idea:
 
 # Neovim
 neovim: spacevim
+	@ mkdir -p ${HOME}/.SpaceVim.d/autoload
 	@ ${LINKER} --dotfile init.toml --source-location editor/neovim --target-file init.toml --target-location ${HOME}/.SpaceVim.d/
 	@ ${LINKER} --dotfile init.vim --source-location editor/neovim --target-file init.vim --target-location ${HOME}/.SpaceVim.d/autoload
 	@ ${LINKER} --dotfile after.vim --source-location editor/neovim --target-file after.vim --target-location ${HOME}/.SpaceVim.d/autoload
