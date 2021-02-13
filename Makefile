@@ -140,8 +140,13 @@ tmux-cache:
 wget:
 	@ ${LINKER} --dotfile wgetrc --source-location tools/wget
 
+# Oh my ZSH
+omz:
+	@ rm -rf ${HOME}/.oh-my-zsh
+	@ curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh 
+
 # ZSH
-zsh: shell/zsh
+zsh: shell/zsh omz
 	@ ${LINKER} --dotfile zshrc --source-location shell/zsh
 	@ ${LINKER} --dotfile zshrc_aliases --source-location shell/zsh
 	@ ${LINKER} --dotfile zshrc_paths --source-location shell/zsh
