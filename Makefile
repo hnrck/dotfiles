@@ -166,3 +166,21 @@ zshrcd:
 
 clean-cache:
 	@ git clean -dxff ${CACHE_DIR}
+
+###############################################################################
+# Dotfiles                                                                    #
+###############################################################################
+
+dotfiles: dotfiles_edit dotfiles_cd dotfiles_install
+
+dotfiles_makefile := $(abspath $(lastword $(MAKEFILE_LIST)))
+dotfiles_dir := $(dir $(dotfiles_makefile))
+
+dotfiles_edit: zshrcd
+	@ echo "alias dotfiles_edit=\"nvim ${dotfiles_makefile}\"" > ${HOME}/.zshrc.d/zshrc_dotfiles_edit
+
+dotfiles_cd: zshrcd
+	@ echo "alias dotfiles_cd=\"cd ${dotfiles_dir}\"" > ${HOME}/.zshrc.d/zshrc_dotfiles_cd
+
+dotfiles_install: zshrcd
+	@ echo "alias dotfiles_install=\"make -C ${dotfiles_dir}\"" > ${HOME}/.zshrc.d/zshrc_dotfiles_install
