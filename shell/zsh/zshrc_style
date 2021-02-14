@@ -31,7 +31,7 @@ then
       conda
       dotnet
       ember
-      kubecontext
+      # kubecontext
       battery
       exec_time
       line_sep

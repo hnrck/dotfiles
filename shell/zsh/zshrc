@@ -16,7 +16,6 @@ then
       cabal
       cargo
       dnf
-      fedora
       git-extras
       gitfast
       git-flow
@@ -24,7 +23,6 @@ then
       github
       git-hubflow
       gitignore
-      git-remote-branch
       man
       pyenv
       pylint
