@@ -145,8 +145,13 @@ omz:
 	@ rm -rf ${HOME}/.oh-my-zsh
 	@ curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh 
 
+spaceship:
+	@ rm -rf "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt"
+	@ git clone https://github.com/denysdovhan/spaceship-prompt.git "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt" --depth=1
+	@ ln -s "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme" "${HOME}/.oh-my-zsh/custom/themes/spaceship.zsh-theme" 
+
 # ZSH
-zsh: shell/zsh omz
+zsh: shell/zsh omz zshrcd
 	@ ${LINKER} --dotfile zshrc --source-location shell/zsh
 	@ ${LINKER} --dotfile zshrc_aliases --source-location shell/zsh
 	@ ${LINKER} --dotfile zshrc_paths --source-location shell/zsh
