@@ -35,7 +35,7 @@ all: cvs dev editor shell term tools
 # CVS
 cvs: git
 
-# Develloper tools
+# Developer tools
 dev: cpp-dev py-dev idea
 
 # Fonts
@@ -66,6 +66,7 @@ wm: haskell-dev xmonad
 # Clang
 clang:
 	@ ${LINKER} --dotfile clang_format --source-location dev/clang
+	@ ${LINKER} --dotfile zshrc_llvm --source-location dev/clang --target-file zshrc_llvm --target-location ${HOME}/.zshrc.d
 
 # Conda
 conda: zshrcd
