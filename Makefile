@@ -11,6 +11,9 @@ TERM_DOTFILE?=hyper # sakura
 SCRIPTS_DIR?=scripts
 CACHE_DIR?=cache
 
+# Specific program
+PYTHON?=python3
+
 LINKER=${SCRIPTS_DIR}/dotfile_linker.sh
 
 .PHONY=help shell editor term cvs dev
@@ -106,7 +109,7 @@ py-dev: py-venv
 
 # Python virtualenv
 py-venv:
-	python3 -m virtualenv ${CACHE_DIR}/venv 1> /dev/null
+	${PYTHON} -m virtualenv ${CACHE_DIR}/venv 1> /dev/null
 	@ ${LINKER} --dotfile venv --source-location ${CACHE_DIR}
 
 # Git
