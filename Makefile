@@ -4,7 +4,7 @@
 
 # Configuration choice
 EDITOR_DOTFILE?=neovim
-SHELL_DOTFILE?=zsh
+SHELL_DOTFILE?=zsh spaceship
 TERM_DOTFILE?=hyper # sakura
 
 # Local path configuration
@@ -149,7 +149,7 @@ omz:
 	@ rm -rf ${HOME}/.oh-my-zsh
 	@ curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh 
 
-spaceship:
+spaceship: zsh
 	@ rm -rf "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt"
 	@ git clone https://github.com/denysdovhan/spaceship-prompt.git "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt" --depth=1
 	@ ln -s "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme" "${HOME}/.oh-my-zsh/custom/themes/spaceship.zsh-theme" 
