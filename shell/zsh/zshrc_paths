@@ -11,6 +11,8 @@ export PATH=$PATH:/usr/local/bin
 
 export PATH=$PATH:/usr/lib64/ccache
 
+export PATH=$PATH:/snap/bin
+
 export PATH=$PATH:$HOME/.cabal/bin/
 
 export PATH=$HOME/.local/bin/:$PATH
