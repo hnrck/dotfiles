@@ -14,7 +14,6 @@ then
       git
       svn
       cabal
-      cargo
       dnf
       git-extras
       gitfast
@@ -28,6 +27,7 @@ then
       pylint
       python
       repo
+      rust
       sudo
       # rvm-prompt
       rbenv
