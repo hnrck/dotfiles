@@ -1,7 +1,7 @@
 [options]
   bootstrap_before = "init#before"
   buffer_index_type = 4
-  colorscheme = "nord"
+  colorscheme = "monochrome"
   background = "dark"
   default_indent = 2
   enable_debug = 0
@@ -13,6 +13,17 @@
   realtime_leader_guide = 1
   statusline_inactive_separator = "arrow"
   statusline_separator = "arrow"
+  custom_color_palette = [
+    ["#e3e8ea", "#454545", 246, 235],
+    ["#e3e8ea", "#5c5c5c", 239, 246],
+    ["#e3e8ea", "#454545", 237, 246],
+    [           "#686868", 241],
+    ["#e3e8ea", "#454545", 235, 109],
+    ["#e3e8ea", "#454545", 235, 208],
+    ["#e3e8ea", "#454545", 235, 108],
+    ["#e3e8ea", "#454545", 235, 72],
+    ["#e3e8ea", "#454545", 235, 132],
+  ]
 
 [[layers]]
   name = 'autocomplete'
@@ -29,33 +40,17 @@
   name = 'VersionControl'
 [[layers]]
   name = 'git'
-[[layers]]
-  name = 'github'
-
-[[layers]]
-  name = 'incsearch'
-[[layers]]
-  name = 'ctrlp'
 
 [[layers]]
   name = 'colorscheme'
 
 [[layers]]
-  name = 'lsp'
-
-[[layers]]
   name = 'lang#c'
-  clang_executable = '/usr/home/h.deschamps/.local/clang+llvm-7.0.0-x86_64-linux-gnu-ubuntu-16.04/bin/clang'
-  libclang_path = '/usr/home/h.deschamps/.local/clang+llvm-7.0.0-x86_64-linux-gnu-ubuntu-16.04/lib/'
   [layer.clang_std]
     c = 'c11'
     cpp = 'c++17'
     objc = 'c11'
     objcpp = 'c++17'
-[[layers]]
-  name = 'lang#elixir'
-[[layers]]
-  name = 'lang#haskell'
 [[layers]]
   name = 'lang#latex'
 [[layers]]
@@ -65,19 +60,9 @@
 [[layers]]
   name = 'lang#python'
 [[layers]]
-  name = 'lang#xml'
-[[layers]]
   name = 'lang#vim'
 
 [[custom_plugins]]
-  name = 'eagletmt/ghcmod-vim'
-  name = 'bitc/vim-hdevtools'
-  name = 'Twinside/vim-hoogle'
   name = 'rhysd/vim-clang-format'
   name = 'vhdirk/vim-cmake'
-  name = 'arecarn/vim-selection'
-  name = 'rhysd/vim-grammarous'
-  name = 'tyrannicaltoucan/vim-deep-space'
-  name = 'icymind/NeoSolarized'
-#name = 'arcticicestudio/nord-vim'
-#name = 'severin-lemaignan/vim-minimap'
+  name = 'fxn/vim-monochrome'
