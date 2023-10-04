@@ -6,13 +6,30 @@
   default_indent = 2
   enable_debug = 0
   enable_guicolors = true
-  enable_statusline_display_mode = false
   enable_tabline_filetype_icon = true
   max_column = 100
   github_username = 'hnrck'
   realtime_leader_guide = 1
-  statusline_inactive_separator = "arrow"
   statusline_separator = "arrow"
+  statusline_iseparator = "bar"
+  buffer_index_type = 0
+  enable_statusline_mode = false
+  statusline_left_sections = [
+    'winnr',
+    'major mode',
+    'filename',
+    'fileformat',
+    'minor mode lighters',
+    'version control info',
+    'search status'
+  ]
+  statusline_right_sections = [
+    'cursorpos',
+    'percentage',
+    'input method',
+    'date',
+    'time'
+  ]
   custom_color_palette = [
     ["#e3e8ea", "#454545", 246, 235],
     ["#e3e8ea", "#5c5c5c", 239, 246],
