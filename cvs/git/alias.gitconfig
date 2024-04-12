@@ -1,40 +1,82 @@
+# Aliases to simplify common Git command usages.
+
 [alias]
-	a    = add
-	ai   = add -i
-	b    = branch
-	bd   = branch -d
-	ca   = commit --amend
-	ci   = commit
-	cim  = commit -m
-	cl   = clean -Xf
-	cli  = clean -Xi
-	clo  = clone
-	co   = checkout
-	d    = diff
-	f    = fetch
-	fa   = fetch --all
-	git  = !exec git
-	lg   = log --color --all --date-order --decorate --dirstat=lines,cumulative --stat
-	lf   = log --all --graph --decorate=full
-	m    = merge
-	p    = push
-	pa   = push --all origin
-	pt   = push --tags
-	r    = reset
-	re   = rebase
-	ri   = rebase -i
-	root = rev-parse --show-toplevel
-	s    = show
-	sd   = stash drop
-	sh   = stash
-	sl   = stash list
-	sp   = stash pop
-	st   = status
-	sup  = submodule update --recursive --remote
-	t    = tag -s
-	uca  = commit --amend
-	uci  = commit 
-	ucim = commit -m
-	up   = pull --rebase
-	upm  = pull
-	ut   = tag
+    # Adding files to staging
+    a    = add
+    ai   = add -i
+
+    # Branch management
+    br   = branch
+    brd  = branch -d
+    brdr = push origin --delete
+    brl  = branch -a
+
+    # Committing changes
+    ca   = commit --amend
+    cim  = commit -m
+
+    # Cleaning the working directory
+    cl   = clean -Xf
+    cli  = clean -Xi
+
+    # Checking out branches or commits
+    co   = checkout
+
+    # Cherry-picking
+    cp   = cherry-pick
+
+    # Displaying differences
+    d    = diff
+
+    # Fetching updates from remote
+    f    = fetch
+    fa   = fetch --all
+
+    # Executing Git within a script
+    git  = !exec git
+
+    # Displaying logs
+    lg   = log --color --all --date-order --decorate --dirstat=lines,cumulative --stat
+    lf   = log --all --graph --decorate=full
+
+    # Merging branches
+    m    = merge
+
+    # Pushing changes to a remote
+    p    = push
+    pa   = push --all origin
+    pt   = push --tags
+
+    # Resetting changes
+    r    = reset
+    rh   = reset HEAD~1
+
+
+    # Rebasing branches
+    re   = rebase
+    ri   = rebase -i
+
+    # Finding the root directory of the repo
+    root = rev-parse --show-toplevel
+
+    # Showing objects
+    s    = show
+
+    # Managing stashes
+    sh   = stash
+    shd  = stash drop
+    shl  = stash list
+    shp  = stash pop
+
+    # Checking status
+    st   = status
+
+    # Updating submodules
+    sup  = submodule update --recursive --remote
+
+    # Tagging
+    t    = tag
+
+    # Pulling changes with rebase
+    up   = pull --rebase
+    upm  = pull

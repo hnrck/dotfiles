@@ -1,3 +1,8 @@
+# User-specific configuration for Git
+
 [user]
-	email = henrick.deschamps@gmail.com
-	name = Henrick Deschamps
+    # Name
+    name = Henrick Deschamps
+
+    # e-mail
+    email = henrick.deschamps@gmail.com

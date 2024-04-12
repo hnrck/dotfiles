@@ -1,10 +1,24 @@
+# Main .gitconfig file
+# This file includes several other configuration files stored in the .gitconfig.d directory.
+# Each included file modularizes different aspects of the Git configuration.
+
+# User-specific settings (e.g., name, email)
 [include]
 	path = ~/.gitconfig.d/user.gitconfig
+
+# Base Git settings (e.g., default behavior settings)
 [include]
 	path = ~/.gitconfig.d/base.gitconfig
+
+# Aliases to simplify command usage
 [include]
 	path = ~/.gitconfig.d/alias.gitconfig
+
+# Delta diff tool configuration, included conditionally based on the availability of 'delta'
 [include]
 	path = ~/.gitconfig.d/delta.gitconfig
+
+# Local machine-specific settings (e.g., machine-specific configurations)
 [include]
 	path = ~/.gitconfig.d/local.gitconfig
+

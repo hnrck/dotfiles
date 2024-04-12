@@ -1,17 +1,43 @@
+# Base configuration settings for Git
+
 [core]
-	excludesfile = ~/.gitignore
-	editor = nvim
-	filemode = false
+    # Global gitignore.
+    excludesfile = ~/.gitignore
+
+    # Default text editor.
+    editor = nvim
+
+    # Disables Git tracking of file mode changes.
+    filemode = false
+
 [init]
-	defaultBranch = main
+    # Default branch name for new repo.
+    defaultBranch = main
+
 [color]
-	ui = auto
+    # Command line coloring.
+    ui = auto
+
 [pull]
-	rebase = true
+    # Rebase local commits.
+    rebase = true
+
 [push]
-	default = simple
+    # Default push behavior to 'simple', which is recommended for general use.
+    # This pushes only the current branch and requires the same name on the remote.
+    default = simple
+
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+    # Configuration for Git Large File Storage (LFS) handling.
+    required = true               # Ensures that LFS is used if configured.
+    clean = git-lfs clean -- %f   # Command to clean files before staging.
+    smudge = git-lfs smudge -- %f # Command to restore files at checkout.
+    process = git-lfs filter-process # Enables the Git LFS filter process.
+
+[merge]
+    # 'false' for a rebase strategy.
+    commit = false
+
+[credential]
+    # Use the credential helper to cache your credentials for a time period.
+    helper = cache --timeout=3600

@@ -120,6 +120,7 @@ git:
 	@ ${LINKER} --dotfile base.gitconfig --source-location cvs/git --target-file base.gitconfig --target-location ${HOME}/.gitconfig.d/
 	@ ${LINKER} --dotfile alias.gitconfig --source-location cvs/git --target-file alias.gitconfig --target-location ${HOME}/.gitconfig.d/
 	@ ${LINKER} --dotfile delta.gitconfig --source-location cvs/git --target-file delta.gitconfig --target-location ${HOME}/.gitconfig.d/
+	@ ${LINKER} --dotfile delta-themes.gitconfig --source-location cvs/git --target-file delta-themes.gitconfig --target-location ${HOME}/.gitconfig.d/
 
 # sakura
 sakura:

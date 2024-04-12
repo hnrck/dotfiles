@@ -1,11 +1,44 @@
+# Delta configuration for improved diff display
+# See:
+# https://github.com/dandavison/delta
+# https://dandavison.github.io/delta/installation.html
+# https://dandavison.github.io/delta/configuration.html
+
 [core]
-	pager = delta
+    # Set Delta as the default pager.
+    pager = delta
+
 [interactive]
-  diffFilter = delta --color-only
+    # Set Delta for interactive rebasing.
+    diffFilter = delta --color-only
+
+
+[include]
+    # Delta themes. See: https://dandavison.github.io/delta/custom-themes.html
+    path = ~/.gitconfig.d/delta-themes.gitconfig
+
 [delta]
-  navigate = true    # use n and N to move between diff sections
-  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    # Enable navigation keys.
+    navigate = true
+
+    # Set to 'true' if using a light background terminal.
+    light = false
+
+    # Specify the theme to use for displaying diffs.
+    # Examples:
+    # features = colibri
+    # features = collared-trogon
+    # features = arctic-fox
+
+    # Enable side-by-side diff view for easier comparison.
+    side-by-side = true
+
+
 [merge]
-  conflictstyle = diff3
+    # Use 'diff3' style for merge conflicts to show base, local, and incoming changes.
+    conflictstyle = diff3
+
 [diff]
-  colorMoved = default
+    # Enhance moved code detection with color highlighting.
+    # Options include 'default', 'plain', 'blocks', 'zebra'.
+    colorMoved = default
