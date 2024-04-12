@@ -114,8 +114,12 @@ py-venv:
 
 # Git
 git:
+	@ mkdir -p ${HOME}/.gitconfig.d
 	@ ${LINKER} --dotfile gitconfig --source-location cvs/git
-	@ ${LINKER} --dotfile gitignore --source-location cvs/git
+	@ ${LINKER} --dotfile user.gitconfig --source-location cvs/git --target-file user.gitconfig --target-location ${HOME}/.gitconfig.d/
+	@ ${LINKER} --dotfile base.gitconfig --source-location cvs/git --target-file base.gitconfig --target-location ${HOME}/.gitconfig.d/
+	@ ${LINKER} --dotfile alias.gitconfig --source-location cvs/git --target-file alias.gitconfig --target-location ${HOME}/.gitconfig.d/
+	@ ${LINKER} --dotfile delta.gitconfig --source-location cvs/git --target-file delta.gitconfig --target-location ${HOME}/.gitconfig.d/
 
 # sakura
 sakura:

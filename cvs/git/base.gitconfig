@@ -1,0 +1,17 @@
+[core]
+	excludesfile = ~/.gitignore
+	editor = nvim
+	filemode = false
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[pull]
+	rebase = true
+[push]
+	default = simple
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

@@ -3,6 +3,9 @@
 *.swp
 .refresh
 .DS_Store
+.idea
 
 build
 install
+
+.gitlab-ci-local/
